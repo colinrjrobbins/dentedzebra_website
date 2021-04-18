@@ -19,6 +19,10 @@ def process():
 def gallery():
     return render_template('gallery.html', title='Gallery - DentedZebra')
 
+@app.route('/repairs')
+def repairs():
+    return render_template('repairs_upgrade.html', title='Repairs - DentedZebra')
+
 @app.route('/about')
 def about():
     return render_template('about.html', title='About - DentedZebra')
