@@ -63,20 +63,6 @@ body{
     width: 50%;
 }
 
-.logo-column{
-    display: flex;
-    align-content: flex-start;
-    justify-content: left;
-    width:25%;
-}
-
-.nav-column{
-    display: flex;
-    align-content: flex-end;
-    justify-content: right;
-    width:75%;
-}
-
 .footer-column {
     display: flex;
     align-content:flex-end;
@@ -128,7 +114,7 @@ body{
 
 .nav a:hover{
     background-color:rgba(19, 6, 6, 0.315);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .main-nav {
@@ -252,4 +238,27 @@ body{
 .bold {
     font-weight:800;
     color: white;
+}
+
+.bold-contact {
+    font-weight:900;
+    color: black;
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+    color: black;
+    border-style: solid;
+    border-color:white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 0.25em;
+    text-align: center;
+
+}
+
+.button a {
+    color: black;
+    font-weight:bolder;
 }
