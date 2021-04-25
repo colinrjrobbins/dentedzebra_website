@@ -6,14 +6,22 @@ import InstagramLogo from '../../images/logo/instagram.png';
 
 const Footer = () => {
     return (
-        <div>
-            <div>
-                <h6>DentedZebra Speakers</h6>
+        <div className="main-footer">
+            <div className="">
+                <h3>DentedZebra Speakers</h3>
             </div>
             <div>
                 <ul>
-                    <li><img src={FacebookLogo} alt="Facebook"></img></li>
-                    <li><img src={InstagramLogo} alt="Instagram"></img></li>
+                    <li>
+                        <a href="https://facebook.com" target="__blank">
+                            <img src={FacebookLogo} alt="Facebook"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dentedzebraspeakers/" target="__blank">
+                            <img src={InstagramLogo} alt="Instagram"></img>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
