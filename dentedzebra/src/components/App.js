@@ -21,20 +21,14 @@ function App(props) {
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
         </div>
-
+        <div className="content">
           <Route exact path='/' component={Home} />
           <Route exact path='/contact' component={Contact} />
-{/* 
-          <Switch>
-              <Route path="/">
-                <Home />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-          </Switch> */}
-        </Router>
-      <Footer />
+        </div>
+      </Router>
+      <div className="footer">
+        <Footer/>
+      </div>
     </div>
   );
 }

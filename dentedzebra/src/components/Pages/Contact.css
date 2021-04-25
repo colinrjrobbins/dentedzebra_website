@@ -1,0 +1,14 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+.contact-page{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.contact-page h2{
+    padding: 1em;
+}

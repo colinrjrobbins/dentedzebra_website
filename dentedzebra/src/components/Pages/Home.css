@@ -1,0 +1,17 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+.main_page {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.main_page h2{
+    padding: 1em;
+}
