@@ -16,7 +16,7 @@ import About from './Pages/About';
 
 function App(props) {
   return (
-    <div className="App">
+    <div className="app-container">
       <Header />
       <Router>
         <div className="nav">

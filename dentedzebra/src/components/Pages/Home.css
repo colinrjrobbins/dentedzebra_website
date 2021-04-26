@@ -9,6 +9,10 @@
     max-width: 900px;
 }
 
+.main_page p {
+    padding: 0.25em;
+}
+
 .main_page h2{
     padding: 1em;
 }

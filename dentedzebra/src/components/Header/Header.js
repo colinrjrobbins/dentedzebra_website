@@ -5,10 +5,8 @@ import image from '../../Images/Logo/dentedzebra.png';
 
 const Header = () => {
     return (
-        <div>
-            <div className="image-container">
+        <div className="logo-container">
                 <img className="logo" src={image} alt=""></img>
-            </div>
         </div>
     )
 };

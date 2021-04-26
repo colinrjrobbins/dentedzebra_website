@@ -2,10 +2,14 @@ import React from 'react';
 
 import './Process.css';
 
+import Banner from '../../Images/Process/banner.png';
+import RickandMorty from '../../Images/Process/rick_and_morty_speaker_concept.jpg';
+
+
 const Process = () => {
     return(
-    <div>
-        <h2 className="title">It All Begins Here</h2>
+    <div className="process-page">
+        <h2>It All Begins Here</h2>
         <p>
             We go through a fairly extensive process to make sure that
             what we are designing is exactly what you want, and we don't
@@ -18,8 +22,8 @@ const Process = () => {
             concept design for you to checkout and change how you want.
         </p>
         <p>For example:</p>
-        <div className="image-container">
-            <img className="modify-image" src="{{ url_for('static',filename='images/banner.png') }}" />
+        <div>
+            <img src={Banner} alt="digit_rendered_photo" />
         </div>
         <p></p>
         <h4><u>Re-Iteration Process</u></h4>
@@ -28,8 +32,8 @@ const Process = () => {
             and design again. Once we get it just right we will begin the purchasing
             process.
         </p>
-        <div className="image-container">
-            <img className="modify-image" src="{{ url_for('static',filename='images/rick_and_morty_speaker_concept.jpg') }}" />
+        <div>
+            <img src={RickandMorty} alt="rick_and_morty_designed_speakers" />
         </div>
         <p></p>
         <h4><u>Puchasing and Preparing</u></h4>
@@ -44,8 +48,8 @@ const Process = () => {
             can we will be updating you and keeping you in the loop, either with pictures
             or purchases to make sure every piece is exactly correct.
         </p>
-        <div className="image-container">
-            <img className="modify-image" src="{{ url_for('static',filename='images/progress_photo.jpg') }}" />
+        <div >
+            <img src="{{ url_for('static',filename='images/progress_photo.jpg') }}" />
         </div>
         <p></p>
         <h4><u>Finishing</u></h4>
@@ -53,11 +57,11 @@ const Process = () => {
             on our end, you just need to sit back, relax and watch the build take place.
             Then you get to bask in the glory of your one of a kind speaker build.
         </p>
-        <div className="image-container">
-            <img className="modify-image" src="{{ url_for('static',filename='images/classic_rock_speakers.png') }}" />
+        <div>
+            <img src="{{ url_for('static',filename='images/classic_rock_speakers.png') }}" />
         </div>
         <p>What are you waiting for?!</p>
-        <button className="button"><a href="/contact">CONTACT US</a></button>
+        <button className="process-page__button"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 
