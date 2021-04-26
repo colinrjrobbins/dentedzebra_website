@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Header.css';
-import image from '../../images/logo/dentedzebra.png';
+import image from '../../Images/Logo/dentedzebra.png';
 
 const Header = () => {
     return (

@@ -1,16 +1,16 @@
 import React from 'react';
 
 import './Footer.css';
-import FacebookLogo from '../../images/logo/facebook.png';
-import InstagramLogo from '../../images/logo/instagram.png';
+import FacebookLogo from '../../Images/Logo/facebook.png';
+import InstagramLogo from '../../Images/Logo/instagram.png';
 
 const Footer = () => {
     return (
         <div className="main-footer">
-            <div className="">
+            <div className="main-footer__title">
                 <h3>DentedZebra Speakers</h3>
             </div>
-            <div>
+            <div className="main-footer__social">
                 <ul>
                     <li>
                         <a href="https://facebook.com" target="__blank">

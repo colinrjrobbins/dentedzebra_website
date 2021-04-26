@@ -1,16 +1,12 @@
-*{
-    padding:0;
-    margin:0;
-}
-
 .logo {
     width:160px;
     height: 160px;
 }
 
 .image-container{
-    
+    display: flex;
     background-color: white;
     padding-bottom: 0.5em;
-
+    flex-direction: column;
+    align-items: center;
 }
