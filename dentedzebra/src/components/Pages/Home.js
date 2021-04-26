@@ -15,8 +15,8 @@ const Home = () =>{
             </p>
             <p>Don't just take our word for it, check out some previous
                 work in the <u><a href="/gallery">Gallery</a></u>, find out
-                more about DentedZebra Speakers under the <u><a href="/about">About Us</a></u>
-                section, and even see our <u><a href="/process">Process</a></u> and how it would
+                more about DentedZebra Speakers under the <u><a href="/about">About Us</a></u> section,
+                 and even see our <u><a href="/process">Process</a></u> and how it would
                 all work if you did decide to build your speakers with us.
             </p>
             <p>On the other side, if you have speakers already (we would hope most of you do), we
@@ -32,8 +32,8 @@ const Home = () =>{
                 to take them and salvage as much as we can for your build or another persons build.
                 Saves you money on your own speakers, and saving the environment one speaker at a time, YAY!
             </p>
-            <p>If you decide to pull the trigger, go to the <u><a href="/contact">Contact</a></u> 
-                section to start your journey and make a speaker you will adore.</p>
+            <p>If you decide to pull the trigger, go to the <u><a href="/contact">Contact</a></u> section
+             to start your journey and make a speaker you will adore.</p>
 
             <h2>Welcome to a new look and a better sound.</h2>
         </div>

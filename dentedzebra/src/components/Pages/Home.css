@@ -6,10 +6,7 @@
     align-items: center;
     color: white;
     padding-bottom: 60px;
-}
-
-.main-page p {
-    padding: 0.2em;
+    max-width: 900px;
 }
 
 .main_page h2{
