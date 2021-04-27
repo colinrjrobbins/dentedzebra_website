@@ -1,11 +1,15 @@
 import React from 'react';
 
 import './Repair.css';
+import './StyleGeneral.css';
+
+import AST1500_Rebuild from '../../images/repair/ast1500_subwoofer.jpg';
+import AST1500_Crossover from '../../images/repair/ast1500_crossover.jpg';
 
 const Repair = () => {
     return(
-    <div>
-        <h2 class="title">Repairs and Upgrades</h2>
+    <div className="general">
+        <h2>Repairs and Upgrades</h2>
         <p>So you want to repair a beautiful old set of speakers? We get it, hand 
             me downs, junk yard salvage, you get the idea. Whatever it is we can
             fix it!
@@ -13,16 +17,16 @@ const Repair = () => {
         <p>Take for example, this set of speakers that we repaired from someone who
             didn't want them anymore.
         </p>
-        <div class="image-container">
-            <img class="modify-image" src="{{ url_for('static',filename='images/ast1500_subwoofer.jpg') }}" />
+        <div>
+            <img src={AST1500_Rebuild} alt="" />
         </div>
         <p></p>
         <p>This set of speakers are known as AST-1500 (props to the company, they built awesome speakers)
                 or better known as "scammers speakers", the kind of speakers you buy for $100 out of the back 
                 of someone car in a sketchy parking lot with all the insides ripped out and broken speaker drivers. 
         </p>
-        <div class="image-container">
-            <img class="modify-image" src="{{ url_for('static',filename='images/ast1500_crossover.jpg') }}" />
+        <div>
+            <img src={AST1500_Crossover} alt="" />
         </div>
         <p></p>
         <p>Thanks to the friend who donated these to us, we repaired and rebuilt them from the ground up.
@@ -35,7 +39,7 @@ const Repair = () => {
             DentedZebra Speakers makes the best of whatever is handed our way and strive to make your listening experience 
             the best it can be.
         </p>
-        <button class="button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

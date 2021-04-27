@@ -1,14 +1,15 @@
 import React from 'react';
 
 import './Home.css';
+import './StyleGeneral.css';
 
 const Home = () =>{
     return(
-        <div className="main_page">
+        <div className="general">
             <h2>Your Dream, Your Speakers</h2>
             
             <p>Welcome to something NEW and exciting!</p>
-            <button className="main-page__button"><a href="/contact">CONTACT US</a></button>
+            <button className="general__button"><a href="/contact">CONTACT US</a></button>
             <p></p>
             <p>Build a speaker that your excited about instead
                 of the boring old boxes with mediocre sound that we see and hear day in and day out.

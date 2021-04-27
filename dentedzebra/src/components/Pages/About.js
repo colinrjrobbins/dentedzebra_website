@@ -1,14 +1,15 @@
 import React from 'react';
 
 import './About.css';
+import './StyleGeneral.css';
 
-import Colin from '../../Images/About/me.jpg'
+import EngraveLogo from '../../images/about/dentedzebra_label_1.jpg'
 
 const About = () => {
     return(
-    <div className="about-page">
+    <div className="general">
         <h2>About Us</h2>
-        <img src={Colin} alt="colin" />
+        <img className="about__image" src={EngraveLogo} alt="colin" />
         <p></p>
         <p>I am <b>Colin Robbins</b>, the creator of DentedZebra Speakers. I have always had a passion for 
             music, a love for building and am always thrilled to learn something new! I completed my Computer Engineering diploma
@@ -20,7 +21,7 @@ const About = () => {
             I want to bring you something completely unique with sound quality that will make you quiver with excitement everytime you turn 
             your speakers on. I want to make your vision come to fruition. 
         </p>
-        <button className="about-page__button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

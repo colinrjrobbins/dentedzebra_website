@@ -1,0 +1,43 @@
+.general {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    color: white;
+    padding-bottom: 60px;
+    max-width: 900px;
+}
+
+.general p {
+    padding: 0.25em;
+}
+
+.general h2{
+    padding: 1em;
+}
+
+.general a {
+    color: white;
+}
+
+.general img{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    padding: 0.5em;
+}
+
+.general__button {
+    border-style: solid;
+    border-color:white;
+    border-radius: 40px;
+    font-size: 25px;
+    padding: 0.4em;
+    text-align: center;
+}
+
+.general__button a {
+    color: black;
+    text-decoration: none;
+}

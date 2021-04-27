@@ -1,14 +1,17 @@
 import React from 'react';
 
 import './Process.css';
+import './StyleGeneral.css';
 
-import Banner from '../../Images/Process/banner.png';
-import RickandMorty from '../../Images/Process/rick_and_morty_speaker_concept.jpg';
-
+import Render from '../../images/process/stickerbomb_mini_render.png';
+import Progress1 from '../../images/process/progress_photo_01.jpg';
+import Progress2 from '../../images/process/progress_photo_1.jpg';
+import Progress4 from '../../images/process/progress_photo_3.jpg';
+import FinalPhoto from '../../images/process/final_image.jpg';
 
 const Process = () => {
     return(
-    <div className="process-page">
+    <div className="general">
         <h2>It All Begins Here</h2>
         <p>
             We go through a fairly extensive process to make sure that
@@ -23,7 +26,7 @@ const Process = () => {
         </p>
         <p>For example:</p>
         <div>
-            <img src={Banner} alt="digit_rendered_photo" />
+            <img src={Render} alt="digit_rendered_photo" />
         </div>
         <p></p>
         <h4><u>Re-Iteration Process</u></h4>
@@ -32,9 +35,6 @@ const Process = () => {
             and design again. Once we get it just right we will begin the purchasing
             process.
         </p>
-        <div>
-            <img src={RickandMorty} alt="rick_and_morty_designed_speakers" />
-        </div>
         <p></p>
         <h4><u>Puchasing and Preparing</u></h4>
         <p>Once the design has been confirmed a go, we will begin figuring out what
@@ -48,8 +48,11 @@ const Process = () => {
             can we will be updating you and keeping you in the loop, either with pictures
             or purchases to make sure every piece is exactly correct.
         </p>
+        <div>
+            <img src={Progress1} alt="" />
+        </div>
         <div >
-            <img src="{{ url_for('static',filename='images/progress_photo.jpg') }}" />
+            <img src={Progress2} alt="" />
         </div>
         <p></p>
         <h4><u>Finishing</u></h4>
@@ -58,10 +61,11 @@ const Process = () => {
             Then you get to bask in the glory of your one of a kind speaker build.
         </p>
         <div>
-            <img src="{{ url_for('static',filename='images/classic_rock_speakers.png') }}" />
+        <img src={Progress4} alt="" />
         </div>
         <p>What are you waiting for?!</p>
-        <button className="process-page__button"><a href="/contact">CONTACT US</a></button>
+        <img src={FinalPhoto} alt="" />
+        <button className="general__button"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

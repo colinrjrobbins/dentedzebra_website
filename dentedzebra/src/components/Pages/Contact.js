@@ -1,11 +1,12 @@
 import React from 'react';
 
 import './Contact.css';
+import './StyleGeneral.css';
 
 const Contact = () => {
     return (
-        <div className="contact-page">
-            <h2 class="title">Contact Us</h2>
+        <div className="general contact-page">
+            <h2>Contact Us</h2>
             <h4><u>Important Information</u></h4>
             <p><b>NOTE:</b> As of right now we are only building speakers for the York Region (Canada) area (can check
                 this <u><a href="https://www.google.com/maps/place/Regional+Municipality+of+York,+ON/@44.0913566,-79.7459881,10z/data=!3m1!4b1!4m5!3m4!1s0x882acdaee4d2a679:0x108dcfb46a288a64!8m2!3d43.9884612!4d-79.4703885" target="__blank">MAP</a></u> to 

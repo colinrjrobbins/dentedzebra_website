@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './Footer.css';
-import FacebookLogo from '../../Images/Logo/facebook.png';
-import InstagramLogo from '../../Images/Logo/instagram.png';
+import FacebookLogo from '../../images/logo/facebook.png';
+import InstagramLogo from '../../images/logo/instagram.png';
 
 const Footer = () => {
     return (

@@ -1,41 +1,9 @@
-*{
-    padding:0;
-    margin: 0;
-}
-
-.contact-page{
-    display: flex;
-    align-content: flex-start;
-    flex-direction: column;
-    background-color: black;
-    align-items: center;
-    color: white;
-    padding-bottom: 60px;
-    max-width: 900px;
-}
-
 .contact-page hr{
     width: 100%;
     padding: 1em;
     visibility: hidden;
 }
 
-.contact-page h2{
-    padding: 1em;
-}
-
-.contact-page h4{
-    padding: 0.5em;
-}
-
 .contact-page th{
     padding-right: 0.5em;
-}
-
-.contact-page a {
-    color: white;
-}
-
-.contact-page p {
-    padding: 0.25em;
 }
