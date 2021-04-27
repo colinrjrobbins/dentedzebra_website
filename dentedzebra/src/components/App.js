@@ -4,6 +4,7 @@ import { BrowserRouter as Router,
          Link } from 'react-router-dom';
 
 import './App.css';
+import './Pages/Animations.css';
 
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
@@ -14,13 +15,15 @@ import Repair from './Pages/Repair';
 import Gallery from './Pages/Gallery';
 import About from './Pages/About';
 
+const fadeIn = "animate__fadeIn";
+
 function App(props) {
   return (
     <div className="app-container">
       <Header />
       <Router>
         <div className="nav">
-          <ul>
+          <ul className={fadeIn}>
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/process">PROCESS</Link></li>
             <li><Link to="/repair">REPAIRS</Link></li>

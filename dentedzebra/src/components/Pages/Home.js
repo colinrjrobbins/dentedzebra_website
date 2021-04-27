@@ -2,13 +2,34 @@ import React from 'react';
 
 import './Home.css';
 import './StyleGeneral.css';
+import './Animations.css';
+
+const ButtonAnimation = "general__button animate__slideLeft button__ripple";
 
 const Home = () =>{
     return(
-        <div className="general">
-            <h2>Your Dream, Your Speakers</h2>
-            
-            <p>Welcome to something NEW and exciting!</p>
+        <div className="general main-page__main-container animate__fadeIn">
+            <h1 className="animate__slideLeft">Your Dream, Your Speakers</h1>
+            <p></p>
+            <div className="welcome-box">
+                <div>
+                    <button className={ButtonAnimation}><a href="/contact">CONTACT</a></button>
+                    <p></p>
+                    <button className={ButtonAnimation}><a href="/process">OUR PROCESS</a></button>
+                    <p></p>
+                    <button className={ButtonAnimation}><a href="/gallery">GALLERY</a></button>
+                    <p></p>
+                    <button className={ButtonAnimation}><a href="/repair">REPAIRS & UPGRADES</a></button>
+                    <p></p>
+                    <button className={ButtonAnimation}><a href="/about">ABOUT US</a></button>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            {/*
+            <p>Welcome to something <b>NEW</b> and exciting!</p>
             <button className="general__button"><a href="/contact">CONTACT US</a></button>
             <p></p>
             <p>Build a speaker that your excited about instead
@@ -35,8 +56,10 @@ const Home = () =>{
             </p>
             <p>If you decide to pull the trigger, go to the <u><a href="/contact">Contact</a></u> section
              to start your journey and make a speaker you will adore.</p>
-
-            <h2>Welcome to a new look and a better sound.</h2>
+            */}
+            <hr />
+            <hr />
+            <h2 className="animate__slideLeft">Welcome to a new look and a better sound.</h2>
         </div>
     );
 }

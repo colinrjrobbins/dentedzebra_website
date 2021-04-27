@@ -1,3 +1,25 @@
 .main-page__green {
     color: limegreen;
 }
+
+.main-page__main-container{
+    width: 90%;
+}
+
+.welcome-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-image: url("../../images/gallery/classic_rock_speakers.png");
+    background-blend-mode: multiply;
+    background-size:cover;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.welcome-box button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

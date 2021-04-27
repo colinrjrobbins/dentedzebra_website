@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Header.css';
 import logo from '../../images/logo/dentedzebra.png';
+import '../Pages/Animations.css';
 
 const Header = () => {
     return (
