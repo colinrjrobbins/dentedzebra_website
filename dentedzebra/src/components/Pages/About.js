@@ -2,6 +2,7 @@ import React from 'react';
 
 import './About.css';
 import './StyleGeneral.css';
+import './Animations.css';
 
 import EngraveLogo from '../../images/about/dentedzebra_label_1.jpg'
 
@@ -21,7 +22,7 @@ const About = () => {
             I want to bring you something completely unique with sound quality that will make you quiver with excitement everytime you turn 
             your speakers on. I want to make your vision come to fruition. 
         </p>
-        <button className="general__button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

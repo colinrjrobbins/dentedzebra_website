@@ -19,7 +19,7 @@ const fadeIn = "animate__fadeIn";
 
 function App(props) {
   return (
-    <div className="app-container">
+    <div className="app-container animate__fadeInPage">
       <Header />
       <Router>
         <div className="nav">

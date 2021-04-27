@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Gallery.css';
 import './StyleGeneral.css';
+import './Animations.css';
 
 import ClassicRockSpeakers from '../../images/gallery/classic_rock_speakers.png';
 import StickerBomb from '../../images/gallery/stickerbomb_2_edit.png';
@@ -38,7 +39,7 @@ const Gallery = () => {
             for the smaller size rocks the house. The wood for this build was actually completely recycled from an old kitchen 
             counter siding, would you ever be able to tell? 
         </p>
-        <button className="general__button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

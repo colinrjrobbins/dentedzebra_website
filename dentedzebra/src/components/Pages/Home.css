@@ -11,7 +11,7 @@
     height: auto;
     display: flex;
     background-image: url("../../images/gallery/classic_rock_speakers.png");
-    background-blend-mode: multiply;
+    background-blend-mode:multiply;
     background-size:cover;
     flex-direction: column;
     justify-content: flex-start;

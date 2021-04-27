@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Repair.css';
 import './StyleGeneral.css';
+import './Animations.css';
 
 import AST1500_Rebuild from '../../images/repair/ast1500_subwoofer.jpg';
 import AST1500_Crossover from '../../images/repair/ast1500_crossover.jpg';
@@ -39,7 +40,7 @@ const Repair = () => {
             DentedZebra Speakers makes the best of whatever is handed our way and strive to make your listening experience 
             the best it can be.
         </p>
-        <button className="general__button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 

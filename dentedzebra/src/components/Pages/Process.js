@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Process.css';
 import './StyleGeneral.css';
+import './Animations.css';
 
 import Render from '../../images/process/stickerbomb_mini_render.png';
 import Progress1 from '../../images/process/progress_photo_01.jpg';
@@ -65,7 +66,7 @@ const Process = () => {
         </div>
         <p>What are you waiting for?!</p>
         <img src={FinalPhoto} alt="" />
-        <button className="general__button"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
     </div>);
 }
 
