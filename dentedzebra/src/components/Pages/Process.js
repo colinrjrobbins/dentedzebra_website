@@ -12,7 +12,7 @@ import FinalPhoto from '../../images/process/final_image.jpg';
 
 const Process = () => {
     return(
-    <div className="general">
+    <div className="general animate__fadeIn">
         <h2>It All Begins Here</h2>
         <p>
             We go through a fairly extensive process to make sure that

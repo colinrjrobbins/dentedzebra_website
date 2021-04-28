@@ -19,7 +19,7 @@ const Home = () =>{
                     <p></p>
                     <button className={ButtonAnimation}><a href="/gallery">GALLERY</a></button>
                     <p></p>
-                    <button className={ButtonAnimation}><a href="/repair">REPAIRS & UPGRADES</a></button>
+                    <button className={ButtonAnimation}><a href="/repair">REPAIRS + UPGRADES</a></button>
                     <p></p>
                     <button className={ButtonAnimation}><a href="/about">ABOUT US</a></button>
                     <p></p>
