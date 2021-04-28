@@ -8,7 +8,7 @@ import EngraveLogo from '../../images/about/dentedzebra_label_1.jpg'
 
 const About = () => {
     return(
-    <div className="general">
+    <div className="general animate__fadeIn">
         <h2>About Us</h2>
         <img className="about__image" src={EngraveLogo} alt="colin" />
         <p></p>

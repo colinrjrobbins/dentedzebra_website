@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import nodemailer from 'nodemailer';
 
 import './Contact.css';
 import './StyleGeneral.css';
 
+const applicationPass = 'uqhn-culq-gaxg-cwfw';
+
 const Contact = () => {
+
+    const [contactType, setContactType] = useState('');
+    const [enteredName, setEnteredName] = useState('');
+    const [roughBudget, setRoughBudget] = useState('');
+    const [conceptDescription, setConceptDescription] = useState('');
+
+
+    const transporter = nodemailer.createTransport({
+        service: 'mail.privateemail.com',
+        port: 465,
+        secure: false,
+        auth: {
+            user: 'inquire@dentedzebra.best',
+            pass: applicationPass,
+        },
+    })
+
     return (
-        <div className="general contact-page">
+        <div className="general contact-page animate__fadeIn">
+            <form>
+
+            </form>
             <h1>Contact Us</h1>
             <h2><u>Important Information</u></h2>
             <p><b>NOTE:</b> As of right now we are only building speakers for the York Region (Canada) area (can check

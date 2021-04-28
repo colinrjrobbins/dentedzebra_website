@@ -26,6 +26,9 @@ const Home = () =>{
                     <p></p>
                     <p></p>
                     <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
             {/*
@@ -57,8 +60,7 @@ const Home = () =>{
             <p>If you decide to pull the trigger, go to the <u><a href="/contact">Contact</a></u> section
              to start your journey and make a speaker you will adore.</p>
             */}
-            <hr />
-            <hr />
+
             <h2 className="animate__slideLeft">Welcome to a new look and a better sound.</h2>
         </div>
     );

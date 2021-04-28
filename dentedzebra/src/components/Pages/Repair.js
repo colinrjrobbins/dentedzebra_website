@@ -9,7 +9,7 @@ import AST1500_Crossover from '../../images/repair/ast1500_crossover.jpg';
 
 const Repair = () => {
     return(
-    <div className="general">
+    <div className="general animate__fadeIn">
         <h2>Repairs and Upgrades</h2>
         <p>So you want to repair a beautiful old set of speakers? We get it, hand 
             me downs, junk yard salvage, you get the idea. Whatever it is we can
