@@ -34,11 +34,11 @@ function App(props) {
         </div>
         <div className="content">
           <Route exact path='/' component={Home} />
-          <Route exact path="/process" component={Process} />
-          <Route exact path="/repair" component={Repair} />
-          <Route exact path="/gallery" component={Gallery} />
-          <Route exact path="/about" component={About} />
-          <Route exact path='/contact' component={Contact} />
+          <Route path="/process" component={Process} />
+          <Route path="/repair" component={Repair} />
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/about" component={About} />
+          <Route path='/contact' component={Contact} />
         </div>
       </Router>
       <div className="footer">
