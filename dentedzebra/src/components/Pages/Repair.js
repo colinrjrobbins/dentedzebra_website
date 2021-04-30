@@ -15,6 +15,14 @@ const Repair = () => {
             me downs, junk yard salvage, you get the idea. Whatever it is we can
             fix it!
         </p>
+        <div className="repair__list">
+            <li>New Stain</li>
+            <li>Repaired Box</li>
+            <li>Attempt to Fix Broken Electronics</li>
+            <li>Add Some Style</li>
+            <li>Replace Speaker Drivers or Components</li>
+            <li>Cleaning and Restoring</li>
+        </div>
         <p>Take for example, this set of speakers that we repaired from someone who
             didn't want them anymore.
         </p>

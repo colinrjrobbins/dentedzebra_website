@@ -9,8 +9,10 @@ import EngraveLogo from '../../images/about/dentedzebra_label_1.jpg'
 const About = () => {
     return(
     <div className="general animate__fadeIn">
-        <h2>About Us</h2>
-        <img className="about__image" src={EngraveLogo} alt="colin" />
+        <h1>About Us</h1>
+        <div className="about">
+            <img src={EngraveLogo} alt="engraved logo" />
+        </div>
         <p></p>
         <p>I am <b>Colin Robbins</b>, the creator of DentedZebra Speakers. I have always had a passion for 
             music, a love for building and am always thrilled to learn something new! I completed my Computer Engineering diploma

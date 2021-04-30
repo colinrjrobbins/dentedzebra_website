@@ -11,7 +11,7 @@ import DeskSpeakers from '../../images/gallery/desk_speakers.jpg';
 const Gallery = () => {
     return(
     <div className="general animate__fadeIn">
-        <h2>Gallery</h2>
+        <h1>Gallery</h1>
         <p>You made it to the gallery! If you want to checkout some more up to date work 
             done by us take a look at 
             our <u><a href="https://www.instagram.com/dentedzebraspeakers/">Instagram</a></u>!
