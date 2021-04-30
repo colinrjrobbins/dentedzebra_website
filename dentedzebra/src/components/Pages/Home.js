@@ -15,15 +15,25 @@ const Home = () =>{
             <p></p>
             <div className="welcome-box">
                 <div>
-                    <button className={ButtonAnimation}><Link to="/contact">CONTACT</Link></button>
+                    <button className={ButtonAnimation}>
+                        <Link to="/contact">CONTACT</Link>
+                    </button>
                     <p></p>
-                    <button className={ButtonAnimation}><Link to="/process">OUR PROCESS</Link></button>
+                    <button className={ButtonAnimation}>
+                        <Link to="/process">OUR PROCESS</Link>
+                    </button>
                     <p></p>
-                    <button className={ButtonAnimation}><Link to="/gallery">GALLERY</Link></button>
+                    <button className={ButtonAnimation}>
+                        <Link to="/gallery">GALLERY</Link>
+                    </button>
                     <p></p>
-                    <button className={ButtonAnimation}><Link to="/repair">REPAIRS + UPGRADES</Link></button>
+                    <button className={ButtonAnimation}>
+                        <Link to="/repair">REPAIRS + UPGRADES</Link>
+                    </button>
                     <p></p>
-                    <button className={ButtonAnimation}><Link to="/about">ABOUT US</Link></button>
+                    <button className={ButtonAnimation}>
+                        <Link to="/about">ABOUT US</Link>
+                    </button>
                     <p></p>
                 </div>
             </div>
