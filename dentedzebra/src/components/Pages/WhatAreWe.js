@@ -8,7 +8,7 @@ import './StyleGeneral.css';
 const WhatAreWe = () =>{
     return (
         <div className="general animate__fadeIn">
-            <h1>Welcome to something <b>NEW</b> and exciting!</h1>
+            <h1>Welcome to something <b>NEW</b>!</h1>
             <p>Build a speaker that your excited about instead of the boring old boxes with mediocre sound
                  that we see and hear day in and day out. Time to dent those speakers to be a little more like 
                  you and not like a company.
