@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import nodemailer from 'nodemailer';
 
 import './Contact.css';
 import './StyleGeneral.css';
 import './Animations.css';
-
-const applicationPass = 'uqhn-culq-gaxg-cwfw';
 
 const Contact = () => {
 
@@ -45,16 +42,33 @@ const Contact = () => {
         setMaterials(event.target.value);
     };
 
-
-    const transporter = nodemailer.createTransport({
-        service: 'mail.privateemail.com',
-        port: 465,
-        secure: false,
-        auth: {
-            user: 'inquire@dentedzebra.best',
-            pass: applicationPass,
-        },
-    })
+    const sendEmail = () =>
+    {
+        let sendInfo = {}
+        if (contactType === "NEWBUILD"){
+            sendInfo = {
+                subject: contactType + ' - ' + enteredName,
+                text: "Rough Budget: $" + roughBudget + "%0d%0a" +
+                      "Concept Description: " + conceptDescription + "%0d%0a" + 
+                      "Materials: " + materials + "%0d%0a",
+            };
+            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
+        }
+        else if (contactType === "REPAIR"){
+            sendInfo = {
+                subject: contactType + ' - ' + enteredName,
+                text: "Issues/Repairs: " + conceptDescription + "%0d%0a",
+            };
+            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
+        }
+        else if (contactType === "DONATE"){
+            sendInfo = {
+                subject: contactType + ' - ' + enteredName,
+                text: "Materials to Donate: " + conceptDescription + "%0d%0a",
+            };
+            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
+        };        
+    };
 
     // used to determine the form that is shown.
     const formChange = (event) =>
@@ -85,6 +99,36 @@ const Contact = () => {
         }
     }
 
+    const clearAll = () =>
+    {
+        setEnteredName('');
+        setEnteredEmail('');
+        setRoughBudget('');
+        setConceptDescription('');
+        setMaterials('');
+    };
+
+    const submitNewHandler = (event) =>
+    {
+        event.preventDefault();
+        sendEmail();
+        clearAll();
+    };
+
+    const submitRepairHandler = (event) =>
+    {
+        event.preventDefault();
+        sendEmail();
+        clearAll();
+    };
+
+    const submitDonateHandler = (event) =>
+    {
+        event.preventDefault();
+        sendEmail();
+        clearAll();
+    };
+
     return (
         <div className="general contact-page animate__fadeIn">
             <h1>Contact Us</h1>
@@ -94,8 +138,9 @@ const Contact = () => {
                 see if you are within the area of operations. If that causes any inconveniences we do apologize, and are
                 planning to expand in the near future.</p>
             <p>We will generally get back within 24 hours to ask any more questions we require before beginning the design.</p>
+            {/* create the initial option for forms */}
             <form className="general">
-                <label for="contactType">Contact Options:</label>
+                <label>Contact Options:</label>
                 <select id="contactType" name="contactType" onChange={formChange}>
                     <option value="">Choose an Option</option>
                     <option value="newBuild">New Speaker Build</option>
@@ -103,80 +148,51 @@ const Contact = () => {
                     <option value="donate">Donation</option>
                 </select>
             </form>
-            <form style={form1Hide} >
-                <h2><u>New Build</u></h2>
-                <label for="name">Name:</label>
+
+            {/* newBuild form */}
+            <form style={form1Hide} onSubmit={submitNewHandler}>
+                <h2><u>New Build</u></h2> 
+                <label>Name:</label>
                 <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
-                <label for="email">Email:</label>
+                <label>Email:</label>
                 <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
-                <label for="name">Rough Budget:</label>
-                <input type="number" min="1.00" step="100.00" id="budget" value={roughBudget} onChange={roughBudgetChangeHandler}></input>
-                <label for="conceptIdea">Concept Design Idea:</label>
+                <label>Rough Budget:</label>
+                <input type="number" min="1.00" id="budget" value={roughBudget} onChange={roughBudgetChangeHandler}></input>
+                <label>Concept Design Idea:</label>
                 <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
-                <label for="materials">Any Materials You have to Contribute:</label>
+                <label>Any Materials You have to Contribute:</label>
                 <textarea id="materials" value={materials} onChange={materialsChangeHandler}></textarea>
                 <p></p>
                 <button className="general__button button__ripple" type="submit">Send Email</button>
             </form>
-            <form style={form2Hide}>
+            {/* repair and upgrade form */}
+            <form style={form2Hide} onSubmit={submitRepairHandler}>
                 <h2><u>Repair / Upgrade</u></h2>
-                <label for="clientName">Name:</label>
+                <label>Name:</label>
                 <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
-                <label for="email">Email:</label>
+                <label>Email:</label>
                 <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
-                <label for="conceptIdea">Issues/Upgrades:</label>
+                {/* issue upgrades */}
+                <label>Issues/Upgrades:</label>
                 <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
                 <p></p>
                 <button className="general__button button__ripple" type="submit">Send Email</button>
             </form>
-            <form style={form3Hide}>
+            {/* donation form */}
+            <form style={form3Hide} onSubmit={submitDonateHandler}>
                 <h2><u>Donation</u></h2>
-                <label for="clientName">Name:</label>
+                <label>Name:</label>
                 <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
-                <label for="email">Email:</label>
+                <label>Email:</label>
                 <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
-                <label for="conceptIdea">Materials To Donate:</label>
+                {/* material donation */}
+                <label>Materials To Donate:</label>
                 <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
                 <p></p>
                 <button className="general__button button__ripple" type="submit">Send Email</button>
             </form>
-            {/*
-            <h2><u>New Builds</u></h2>
-            <p>In the email please include:</p>
-            <ul>
-                <li>Your Name</li>
-                <li>Rough Budget</li>
-                <li>Concept of what you are looking for in your design.</li>
-                <li>If applicable, any parts or wood you have to help.</li>
-            </ul>
-            <table>
-                <tr>
-                    <th>Email: </th>
-                    <th><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></th>
-                </tr>
-            </table>
-            <h2><u>Repairs and Upgrades</u></h2>
-            <p>If your looking to repair or upgrade a set of speakers send us an email with <b>UPGRADE</b> in 
-            the subject line and send us a picture, let's see what cool stuff you have that we can make better!
-            </p>
-            <table>
-                <tr>
-                    <th>Email: </th>
-                    <th><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></th>
-                </tr>
-            </table>
-            <h2><u>Donating</u></h2>
-            <p>If your looking to donate old speakers, wood, parts, equipment, anything, also send an email with <b>DONATE</b> in 
-                the subject and we will let you know if we need the stuff. If you do decide to donate, THANK YOU! Not only are you helping us, but also the environment.
-            </p>
-            
-            <table>
-                <tr>
-                    <th>Email: </th>
-                    <th><u><b class="bold"><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></th>
-                </tr>
-            </table>
-            */}
+            <p>Can also email us directly for any other inquires.</p>
+            <p><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></p>
         </div>
     );
 }
