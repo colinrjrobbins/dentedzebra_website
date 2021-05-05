@@ -1,0 +1,56 @@
+.main-page__green {
+    color: limegreen;
+}
+
+.main-page__main-container{
+    width: 90%;
+}
+
+.welcome-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-image: url("../../images/home/dentedzebra_standing.png");
+    background-blend-mode:multiply;
+    background-size:cover;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 4.8em;
+}
+
+.welcome-box button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media all and (max-width: 736px){
+    .welcome-box {
+        width: 95%;
+        height: auto;
+        display: flex;
+        background-image: none;
+        background-blend-mode:multiply;
+        background-size:cover;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 0;
+    }
+}
+
+@media all and (min-width:898px){
+    .welcome-box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        background-image: url("../../images/home/dentedzebra_standing.png");
+        background-blend-mode:multiply;
+        background-size:cover;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 9em;
+    }
+}
