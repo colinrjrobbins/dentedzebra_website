@@ -14,12 +14,12 @@ const Footer = () => {
             </div>
             <div className="main-footer__social">
                 <ul>
-                    <button className="general__button button__ripple">
+                    <button className="main-footer__button button__ripple">
                         <a href="https://facebook.com" target="__blank">
                             <img src={FacebookLogo} alt="Facebook"></img>
                         </a>
                     </button>
-                    <button className="general__button button__ripple">
+                    <button className="main-footer__button button__ripple">
                         <a href="https://www.instagram.com/dentedzebraspeakers/" target="__blank">
                             <img src={InstagramLogo} alt="Instagram"></img>
                         </a>

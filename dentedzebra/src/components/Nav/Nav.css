@@ -7,13 +7,15 @@
   .nav ul {
     display: flex;
     justify-content:center;
-    align-content:flex-start;
+    align-content:center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
   }
   
   .nav li {
     display:inline-flex;
+    justify-content: center;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -37,5 +39,6 @@
         border-color: black;
         padding-left: 2em;
         padding-right: 2em;
+        width: 150px;
       }
   }
