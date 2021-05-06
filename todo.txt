@@ -1,0 +1,7 @@
+TO DO WEBSITE:
+
+- What are we Page
+	- Bold links
+
+- Contact Page
+	- Change Contact Options to "Contact Us About:"
