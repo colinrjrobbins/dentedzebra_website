@@ -14,15 +14,15 @@ const WhatAreWe = () =>{
                  you and not like a company.
             </p>
             <p>Don't just take our word for it, check out some previous
-                work in the <u><Link to="/gallery">Gallery</Link></u>, find out
-                more about DentedZebra Speakers under the <u><Link to="/about">About Us</Link></u> section,
-                 and even see our <u><Link to="/process">Process</Link></u> and how it would
+                work in the <b><u><Link to="/gallery">Gallery</Link></u></b>, find out
+                more about DentedZebra Speakers under the <b><u><Link to="/about">About Us</Link></u></b> section,
+                 and even see our <b><u><Link to="/process">Process</Link></u></b> and how it would
                 all work if you did decide to build your speakers with us.
             </p>
             <p>On the other side, if you have speakers already (we would hope most of you do), we
                 can do some upgrades or repairs for you! Have an old set that still has a lot of potential? 
                 No worries! If you need new drivers, new box, new electronics or anything in between, we
-                are happy to help. Check out <u><Link to="/repairs">Repairs and Upgrades</Link></u> for
+                are happy to help. Check out <b><u><Link to="/repairs">Repairs and Upgrades</Link></u></b> for
                 more information on that.
             </p>
             <p>Since we are all trying to do our part to help the environment, DentedZebra likes
@@ -32,7 +32,7 @@ const WhatAreWe = () =>{
                 to take them and salvage as much as we can for your build or another persons build.
                 Saves you money on your own speakers, and saving the environment one speaker at a time, YAY!
             </p>
-            <p>If you decide to pull the trigger, go to the <u><Link to="/contact">Contact</Link></u> section
+            <p>If you decide to pull the trigger, go to the <b><u><Link to="/contact">Contact</Link></u></b> section
              to start your journey and make a speaker you will adore.</p>
              <button className="general__button button__ripple"><Link to="/contact">CONTACT US</Link></button>
         </div>

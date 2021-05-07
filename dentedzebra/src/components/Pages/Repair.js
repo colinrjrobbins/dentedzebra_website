@@ -5,7 +5,6 @@ import './StyleGeneral.css';
 import './Animations.css';
 
 import AST1500_Rebuild from '../../images/repair/ast1500_subwoofer.jpg';
-import AST1500_Crossover from '../../images/repair/ast1500_crossover.jpg';
 
 const Repair = () => {
     return(
@@ -34,10 +33,6 @@ const Repair = () => {
                 or better known as "scammers speakers", the kind of speakers you buy for $100 out of the back 
                 of someone car in a sketchy parking lot with all the insides ripped out and broken speaker drivers. 
         </p>
-        <div>
-            <img src={AST1500_Crossover} alt="" />
-        </div>
-        <p></p>
         <p>Thanks to the friend who donated these to us, we repaired and rebuilt them from the ground up.
             Putting entirely new crossovers (electronics) on the inside, we were then able to use these speakers
             that likely would have ended up in the garbage to DJ a wedding, multiple cottage parties and multiple

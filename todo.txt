@@ -5,3 +5,6 @@ TO DO WEBSITE:
 
 - Contact Page
 	- Change Contact Options to "Contact Us About:"
+
+- Main animation
+	- Speed up home page animation a bit

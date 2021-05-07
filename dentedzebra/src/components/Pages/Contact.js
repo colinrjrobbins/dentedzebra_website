@@ -140,7 +140,7 @@ const Contact = () => {
             <p>We will generally get back within 24 hours to ask any more questions we require before beginning the design.</p>
             {/* create the initial option for forms */}
             <form className="general">
-                <label>Contact Options:</label>
+                <label>Contact Us About:</label>
                 <select id="contactType" name="contactType" onChange={formChange}>
                     <option value="">Choose an Option</option>
                     <option value="newBuild">New Speaker Build</option>
