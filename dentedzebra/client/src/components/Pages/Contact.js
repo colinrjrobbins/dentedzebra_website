@@ -4,6 +4,8 @@ import './Contact.css';
 import './StyleGeneral.css';
 import './Animations.css';
 
+import YorkMap from '../../images/map/map.png';
+
 const Contact = () => {
 
     const [contactType, setContactType] = useState('');
@@ -133,10 +135,9 @@ const Contact = () => {
         <div className="general contact-page animate__fadeIn">
             <h1>Contact Us</h1>
             <h2><u>Important Information</u></h2>
-            <p><b>NOTE:</b> As of right now we are only building speakers for the York Region (Canada) area (can check
-                this <u><a href="https://www.google.com/maps/place/Regional+Municipality+of+York,+ON/@44.0913566,-79.7459881,10z/data=!3m1!4b1!4m5!3m4!1s0x882acdaee4d2a679:0x108dcfb46a288a64!8m2!3d43.9884612!4d-79.4703885" target="__blank">MAP</a></u> to 
-                see if you are within the area of operations. If that causes any inconveniences we do apologize, and are
-                planning to expand in the near future.</p>
+            <p><b>NOTE:</b> As of right now we are only building speakers for the York Region (Canada) area (see below for a map) 
+                If that causes any inconveniences we do apologize, and are planning to expand in the near future.</p>
+            <img alt="york_region_map" src={YorkMap} />
             <p>We will generally get back within 24 hours to ask any more questions we require before beginning the design.</p>
             {/* create the initial option for forms */}
             <form className="general">
