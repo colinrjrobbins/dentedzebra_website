@@ -31,7 +31,19 @@
     border-radius: 10px;
   }
 
+  .hamburger {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
   @media all and (max-width: 889px){
+    .nav ul {
+      display: none;
+    }
     .nav li {
         display:inline-flex;
         border-radius: 10px;
@@ -41,4 +53,13 @@
         padding-right: 2em;
         width: 150px;
       }
+    .hamburger{
+      display:inline-flex;
+    }
+  }
+
+  @media all and (min-width: 890px){
+    .nav ul {
+      display:flex;
+    }
   }

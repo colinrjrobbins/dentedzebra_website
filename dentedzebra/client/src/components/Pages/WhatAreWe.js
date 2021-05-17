@@ -22,11 +22,11 @@ const WhatAreWe = () =>{
             <p>On the other side, if you have speakers already (we would hope most of you do), we
                 can do some upgrades or repairs for you! Have an old set that still has a lot of potential? 
                 No worries! If you need new drivers, new box, new electronics or anything in between, we
-                are happy to help. Check out <b><u><Link to="/repairs">Repairs and Upgrades</Link></u></b> for
+                are happy to help. Check out <b><u><Link to="/repair">Repairs and Upgrades</Link></u></b> for
                 more information on that.
             </p>
             <p>Since we are all trying to do our part to help the environment, DentedZebra likes
-                to be <span class="main-page__green">ECO FRIENDLY</span> too! We will take your 
+                to be <span className="main-page__green">ECO FRIENDLY</span> too! We will take your 
                 old furniture (cabinets, wardrobes, kitchen cupboard) and use the wood from that 
                 to build your speakers! If you just want to dispose of your old speakers, we are happy
                 to take them and salvage as much as we can for your build or another persons build.
