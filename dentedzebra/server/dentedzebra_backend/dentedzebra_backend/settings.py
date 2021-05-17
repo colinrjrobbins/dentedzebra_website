@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-(da&p#&$ijw5-o04f(0-^s%h9ivc%+qcipf4ll6$9*+6(%n%7w
 DEBUG = True
 
 ALLOWED_HOSTS = []
-CORS_ORGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -37,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'corsheaders',
+    'mail_app'
 ]
 
 MIDDLEWARE = [
@@ -49,8 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middlware.common.CommonWiddleware',
 ]
 
 ROOT_URLCONF = 'dentedzebra_backend.urls'
