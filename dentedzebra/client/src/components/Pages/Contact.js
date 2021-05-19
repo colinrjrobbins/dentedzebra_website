@@ -24,7 +24,7 @@ class Contact extends React.Component {
     }
 
     mailHandler(event){
-        fetch("/api/mail", {
+        fetch("https://dentedzebra.best/api/mail", {
             method:'POST',
             cache: 'no-cache',
             headers:{
@@ -40,6 +40,7 @@ class Contact extends React.Component {
             })
         })
         .then(response => response.json())
+        .then(json => console.log(json))
         .then(this.setState({messageSentHide:{'display':'flex'}}))
         .then(this.setState({form1Hide:{"display": "none"}}))
         .then(this.setState({form2Hide:{"display": "none"}}))
@@ -182,7 +183,7 @@ class Contact extends React.Component {
                     <p></p>
                     <button className="general__button button__ripple" type="submit">Send Email</button>
                 </form>
-                <h2 style={this.state.messageSentHide}>Email Sent!</h2>
+                <h2 style={this.state.messageSentHide}>Currently Updating Server, please send emails directly.</h2>
                 <p>Can also email us directly for any other inquires.</p>
                 <p><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></p>
             </div>
