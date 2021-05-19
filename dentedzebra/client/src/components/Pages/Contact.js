@@ -9,16 +9,6 @@ import YorkMap from '../../images/map/map.png';
 class Contact extends React.Component {
     constructor(props){
         super(props);
-        //this.mailHandler = this.mailHandler.bind(this);
-        //this.mailSubmit = this.mailSubmit.bind(this);
-        //this.handleFormChange = this.handleFormChange.bind(this);
-        //this.handleInfoClear = this.handleInfoClear.bind(this);
-        //this.enteredNameChangeHandler = this.enteredNameChangeHandler.bind(this);
-        //this.enteredEmailChangeHandler = this.enteredEmailChangeHandler.bind(this);
-        //this.roughBudgetChangeHandler = this.roughBudgetChangeHandler.bind(this);
-        //this.conceptDescriptionChangeHandler = this.conceptDescriptionChangeHandler.bind(this);
-        //this.materialsChangeHandler = this.materialsChangeHandler.bind(this);
-        //this.submitNewHandler = this.submitNewHandler.bind(this);
         this.state = {
             contactType:"",
             enteredName:"",
