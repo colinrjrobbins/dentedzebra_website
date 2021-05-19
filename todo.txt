@@ -1,0 +1,10 @@
+TO DO WEBSITE:
+
+- What are we Page
+	- Bold links
+
+- Contact Page
+	- Change Contact Options to "Contact Us About:"
+
+- Main animation
+	- Speed up home page animation a bit
