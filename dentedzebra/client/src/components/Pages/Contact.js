@@ -24,7 +24,7 @@ class Contact extends React.Component {
     }
 
     mailHandler(event){
-        fetch("https://dentedzebra.best/api/mail", {
+        fetch("/api/mail", {
             method:'POST',
             cache: 'no-cache',
             headers:{
