@@ -24,3 +24,5 @@ yarn-error.log*
 
 ../api/Pipfile
 ../api/Pipfile.lock
+../api/.env
+../api/.flaskenv

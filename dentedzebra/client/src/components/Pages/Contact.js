@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './Contact.css';
 import './StyleGeneral.css';
@@ -9,16 +9,16 @@ import YorkMap from '../../images/map/map.png';
 class Contact extends React.Component {
     constructor(props){
         super(props);
-        this.mailHandler = this.mailHandler.bind(this);
-        this.mailSubmit = this.mailSubmit.bind(this);
-        this.handleFormChange = this.handleOptionChange.bind(this);
-        this.handleInfoClear = this.handleInfoClear.bind(this);
-        this.enteredNameChangeHandler = this.enteredNameChangeHandler.bind(this);
-        this.enteredEmailChangeHandler = this.enteredEmailChangeHandler.bind(this);
-        this.roughBudgetChangeHandler = this.roughBudgetChangeHandler.bind(this);
-        this.conceptDescriptionChangeHandler = this.conceptDescriptionChangeHandler.bind(this);
-        this.materialsChangeHandler = this.materialsChangeHandler.bind(this);
-        this.submitNewHandler = this.submitNewHandler.bind(this);
+        //this.mailHandler = this.mailHandler.bind(this);
+        //this.mailSubmit = this.mailSubmit.bind(this);
+        //this.handleFormChange = this.handleFormChange.bind(this);
+        //this.handleInfoClear = this.handleInfoClear.bind(this);
+        //this.enteredNameChangeHandler = this.enteredNameChangeHandler.bind(this);
+        //this.enteredEmailChangeHandler = this.enteredEmailChangeHandler.bind(this);
+        //this.roughBudgetChangeHandler = this.roughBudgetChangeHandler.bind(this);
+        //this.conceptDescriptionChangeHandler = this.conceptDescriptionChangeHandler.bind(this);
+        //this.materialsChangeHandler = this.materialsChangeHandler.bind(this);
+        //this.submitNewHandler = this.submitNewHandler.bind(this);
         this.state = {
             contactType:"",
             enteredName:"",
@@ -29,42 +29,32 @@ class Contact extends React.Component {
             form1Hide:{'display':'none'},
             form2Hide:{'display':'none'},
             form3Hide:{'display':'none'},
+            messageSentHide:{'display':'none'},
         };
     }
 
     mailHandler(event){
-        fetch("/mail", {
+        fetch("/api/mail", {
             method:'POST',
             cache: 'no-cache',
             headers:{
                 'content_type':'application/json'
-            }
+            },
+            body: JSON.stringify({
+                contactType: this.state.contactType,
+                name: this.state.enteredName,
+                email: this.state.enteredEmail,
+                roughBudget: this.state.roughBudget,
+                conceptDescription: this.state.conceptDescription,
+                materials: this.state.materials,
+            })
         })
-        let sendInfo = {}
-        if (this.contactType === "NEWBUILD"){
-            sendInfo = {
-                subject: this.contactType + ' - ' + this.enteredName,
-                text: "Rough Budget: $" + this.roughBudget + "%0d%0a" +
-                      "Concept Description: " + this.conceptDescription + "%0d%0a" + 
-                      "Materials: " + this.materials + "%0d%0a",
-            };
-            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
-        }
-        else if (this.contactType === "REPAIR"){
-            sendInfo = {
-                subject: this.contactType + ' - ' + this.enteredName,
-                text: "Issues/Repairs: " + this.conceptDescription + "%0d%0a",
-            };
-            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
-        }
-        else if (this.contactType === "DONATE"){
-            sendInfo = {
-                subject: this.contactType + ' - ' + this.enteredName,
-                text: "Materials to Donate: " + this.conceptDescription + "%0d%0a",
-            };
-            window.open('mailto:inquire@dentedzebra.best?subject='+sendInfo.subject+'&body='+sendInfo.text);
-        };        
-    }
+        .then(response => response.json())
+        .then(this.setState({messageSentHide:{'display':'flex'}}))
+        .then(this.setState({form1Hide:{"display": "none"}}))
+        .then(this.setState({form2Hide:{"display": "none"}}))
+        .then(this.setState({form3Hide:{"display": "none"}}))
+    };
 
     enteredNameChangeHandler = (event) =>
     {
@@ -95,45 +85,49 @@ class Contact extends React.Component {
     handleFormChange = (event) =>
     {
         if (event.target.value === "newBuild"){
-            this.setState({setForm1:{"display": "flex"}});
-            this.setState({setForm2:{"display": "none"}});
-            this.setState({setForm3:{"display": "none"}});
+            this.setState({messageSentHide:{'display':'none'}});
+            this.setState({form1Hide:{"display": "flex"}});
+            this.setState({form2Hide:{"display": "none"}});
+            this.setState({form3Hide:{"display": "none"}});
             this.setState({contactType:"NEWBUILD"});
         }
         else if (event.target.value === "repairUpgrade"){
-            this.setState({setForm1:{"display": "none"}});
-            this.setState({setForm2:{"display": "flex"}});
-            this.setState({setForm3:{"display": "none"}});
+            this.setState({messageSentHide:{'display':'none'}});
+            this.setState({form1Hide:{"display": "none"}});
+            this.setState({form2Hide:{"display": "flex"}});
+            this.setState({form3Hide:{"display": "none"}});
             this.setState({contactType:"REPAIR"});
         }
         else if (event.target.value === "donate"){
-            this.setState({setForm1:{"display": "none"}});
-            this.setState({setForm2:{"display": "none"}});
-            this.setState({setForm3:{"display": "flex"}});
+            this.setState({messageSentHide:{'display':'none'}});
+            this.setState({form1Hide:{"display": "none"}});
+            this.setState({form2Hide:{"display": "none"}});
+            this.setState({form3Hide:{"display": "flex"}});
             this.setState({contactType:"DONATE"});
         }
         else
         {
-            this.setState({setForm1:{"display": "none"}});
-            this.setState({setForm2:{"display": "none"}});
-            this.setState({setForm3:{"display": "none"}});
+            this.setState({messageSentHide:{'display':'none'}});
+            this.setState({form1Hide:{"display": "none"}});
+            this.setState({form2Hide:{"display": "none"}});
+            this.setState({form3Hide:{"display": "none"}});
         }
     }
 
     handleInfoClear = () =>
     {
-        setEnteredName('');
-        setEnteredEmail('');
-        setRoughBudget('');
-        setConceptDescription('');
-        setMaterials('');
+        this.setState({enteredName:''});
+        this.setState({enteredEmail:''});
+        this.setState({roughBudget:''});
+        this.setState({conceptDescription:''});
+        this.setState({materials:''});
     };
 
-    submitNewHandler = (event) =>
+    submitHandler = (event) =>
     {
         event.preventDefault();
-        sendEmail();
-        handleInfoClear();
+        this.mailHandler(event);
+        this.handleInfoClear();
     };
 
     render(){
@@ -148,7 +142,7 @@ class Contact extends React.Component {
                 {/* create the initial option for forms */}
                 <form className="general">
                     <label>Contact Us About:</label>
-                    <select id="contactType" name="contactType" onChange={handleFormChange}>
+                    <select id="contactType" name="contactType" onChange={this.handleFormChange}>
                         <option value="">Choose an Option</option>
                         <option value="newBuild">New Speaker Build</option>
                         <option value="repairUpgrade">Repair or Upgrade Speaker</option>
@@ -157,47 +151,48 @@ class Contact extends React.Component {
                 </form>
 
                 {/* newBuild form */}
-                <form style={form1Hide} onSubmit={submitNewHandler}>
+                <form style={this.state.form1Hide} onSubmit={this.submitHandler}>
                     <h2><u>New Build</u></h2> 
                     <label>Name:</label>
-                    <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
+                    <input type="text" id="clientName" value={this.state.enteredName} onChange={this.enteredNameChangeHandler} ></input>
                     <label>Email:</label>
-                    <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
+                    <input type="text" id="email" value={this.state.enteredEmail} onChange={this.enteredEmailChangeHandler}></input>
                     <label>Rough Budget:</label>
-                    <input type="number" min="1.00" id="budget" value={roughBudget} onChange={roughBudgetChangeHandler}></input>
+                    <input type="number" min="1.00" id="budget" value={this.state.roughBudget} onChange={this.roughBudgetChangeHandler}></input>
                     <label>Concept Design Idea:</label>
-                    <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
+                    <textarea id="conceptIdea" value={this.state.conceptDescription} onChange={this.conceptDescriptionChangeHandler}></textarea>
                     <label>Any Materials You have to Contribute:</label>
-                    <textarea id="materials" value={materials} onChange={materialsChangeHandler}></textarea>
+                    <textarea id="materials" value={this.state.materials} onChange={this.materialsChangeHandler}></textarea>
                     <p></p>
                     <button className="general__button button__ripple" type="submit">Send Email</button>
                 </form>
                 {/* repair and upgrade form */}
-                <form style={form2Hide} onSubmit={submitRepairHandler}>
+                <form style={this.state.form2Hide} onSubmit={this.submitHandler}>
                     <h2><u>Repair / Upgrade</u></h2>
                     <label>Name:</label>
-                    <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
+                    <input type="text" id="clientName" value={this.state.enteredName} onChange={this.enteredNameChangeHandler} ></input>
                     <label>Email:</label>
-                    <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
+                    <input type="text" id="email" value={this.state.enteredEmail} onChange={this.enteredEmailChangeHandler}></input>
                     {/* issue upgrades */}
                     <label>Issues/Upgrades:</label>
-                    <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
+                    <textarea id="conceptIdea" value={this.state.conceptDescription} onChange={this.conceptDescriptionChangeHandler}></textarea>
                     <p></p>
                     <button className="general__button button__ripple" type="submit">Send Email</button>
                 </form>
                 {/* donation form */}
-                <form style={form3Hide} onSubmit={submitDonateHandler}>
+                <form style={this.state.form3Hide} onSubmit={this.submitHandler}>
                     <h2><u>Donation</u></h2>
                     <label>Name:</label>
-                    <input type="text" id="clientName" value={enteredName} onChange={enteredNameChangeHandler} ></input>
+                    <input type="text" id="clientName" value={this.state.enteredName} onChange={this.enteredNameChangeHandler} ></input>
                     <label>Email:</label>
-                    <input type="text" id="email" value={enteredEmail} onChange={enteredEmailChangeHandler}></input>
+                    <input type="text" id="email" value={this.state.enteredEmail} onChange={this.enteredEmailChangeHandler}></input>
                     {/* material donation */}
                     <label>Materials To Donate:</label>
-                    <textarea id="conceptIdea" value={conceptDescription} onChange={conceptDescriptionChangeHandler}></textarea>
+                    <textarea id="conceptIdea" value={this.state.conceptDescription} onChange={this.conceptDescriptionChangeHandler}></textarea>
                     <p></p>
                     <button className="general__button button__ripple" type="submit">Send Email</button>
                 </form>
+                <h2 style={this.state.messageSentHide}>Email Sent!</h2>
                 <p>Can also email us directly for any other inquires.</p>
                 <p><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></p>
             </div>
