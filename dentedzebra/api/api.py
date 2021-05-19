@@ -2,13 +2,14 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
-
+from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 
 app = Flask(__name__)
 CORS(app)
+load_dotenv()
 
 EMAIL = os.environ.get('EMAIL_USERNAME')
 PASSWORD = os.environ.get('EMAIL_PASSWORD')

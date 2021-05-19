@@ -24,11 +24,13 @@ class Contact extends React.Component {
     }
 
     mailHandler(event){
-        fetch("/api/mail", {
+        fetch("https://dentedzebra.best/api/mail", {
             method:'POST',
+            mode: 'cors',
             cache: 'no-cache',
+            credentials: 'same-origin',
             headers:{
-                'content_type':'application/json'
+                'Content-Type':'application/json'
             },
             body: JSON.stringify({
                 contactType: this.state.contactType,
@@ -183,7 +185,7 @@ class Contact extends React.Component {
                     <p></p>
                     <button className="general__button button__ripple" type="submit">Send Email</button>
                 </form>
-                <h2 style={this.state.messageSentHide}>Currently Updating Server, please send emails directly.</h2>
+                <h2 style={this.state.messageSentHide}>Email Sent! Thank you!</h2>
                 <p>Can also email us directly for any other inquires.</p>
                 <p><u><b><a href="mailto:inquire@dentedzebra.best">inquire@dentedzebra.best</a></b></u></p>
             </div>
