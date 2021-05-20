@@ -15,6 +15,9 @@ import Repair from './Pages/Repair';
 import Gallery from './Pages/Gallery';
 import About from './Pages/About';
 import WhatAreWe from './Pages/WhatAreWe';
+import Team from './Team/Team';
+import AustinCraven from './Team/AustinCraven';
+import AshleyDennison from './Team/AshleyDennison';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path="/gallery" component={Gallery} />
           <Route path="/about" component={About} />
           <Route path='/contact' component={Contact} />
+          <Route path='/team' component={Team} />
+          <Route path='/austincraven' component={AustinCraven} />
+          <Route path='/ashleydennison' component={AshleyDennison} />
         </div>
       </Router>
       <div className="footer">

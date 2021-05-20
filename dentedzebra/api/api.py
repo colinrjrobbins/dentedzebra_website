@@ -65,10 +65,23 @@ def send_mail():
         else:
             return jsonify({'mail':'NO OPTION SELECTED'}), 400
 
+        receiptMessage = MIMEMultipart('alternative')
+        receiptMessage['Subject'] = 'Thank You! Your email has been recieved!'
+        receiptMessage['To'] = sender_email
+        receiptMessage['From'] = EMAIL
+        receiptText = 'You are the best! As a small business we really appreciate you.\n\n' + \
+                      'We are just sending this to let you know that we generally get back within 24 hours and will likely ask'+\
+                      ' a few more questions just to make sure we are understanding exactly what your looking for before we begin'+\
+                      'the digital design.\n\n'+\
+                      'Cheers,\nColin Robbins\nLead Product Design and Creator\nDentedZebra Speakers'
+        textReceiptAttach = MIMEText(receiptText,'plain')
+        receiptMessage.attach(textReceiptAttach)
+
         try:
             with smtplib.SMTP_SSL(SMTP_SERVER,port=port,context=context) as server:
                 server.login(EMAIL,PASSWORD)
                 server.sendmail(from_addr=EMAIL,to_addrs=EMAIL,msg=message.as_bytes())
+                server.sendmail(from_addr=EMAIL,to_addrs=sender_email,msg=receiptMessage.as_bytes())
                 server.quit()
         except Exception as e:
             return jsonify({'mail':'ERROR IN SEND ' + str(e)}), 400

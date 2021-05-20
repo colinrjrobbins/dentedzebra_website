@@ -11,7 +11,7 @@ const Home = () =>{
     return(
         <div className="general main-page__main-container animate__fadeIn">
             <h1 className="animate__slideLeft">Your Dream, Your Speakers</h1>
-            <button className={ButtonAnimation}><Link to="/whatarewe"><b>WHAT ARE WE?!</b></Link></button>
+            <button className={ButtonAnimation}><Link to="/whatarewe"><b>WHAT IS DENTEDZEBRA</b></Link></button>
             <p></p>
             <div className="welcome-box">
                 <div>

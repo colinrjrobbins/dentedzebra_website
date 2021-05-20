@@ -7,9 +7,8 @@ import '../Pages/Animations.css';
 
 const Header = () => {
     return (
-        <div className="logo-container">
-                
-                <img className="logo animate__fadeInLogo" src={logo} alt=""></img>
+        <div className="logo-container">    
+            <img className="logo animate__fadeInLogo" src={logo} alt=""></img>
         </div>
     )
 };

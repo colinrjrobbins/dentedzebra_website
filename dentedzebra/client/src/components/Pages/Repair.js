@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Repair.css';
 import './StyleGeneral.css';
@@ -43,7 +44,7 @@ const Repair = () => {
             DentedZebra Speakers makes the best of whatever is handed our way and strive to make your listening experience 
             the best it can be.
         </p>
-        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><Link to="/contact">CONTACT US</Link></button>
     </div>);
 }
 
