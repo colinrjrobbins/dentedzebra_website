@@ -24,7 +24,7 @@ const Team = () => {
                         <p>Colin finished school in Computer Engineering and is continuing 
                             with Software Engineering while having fun building custom speakers for people.
                         </p>
-                        <button className="general__button button__ripple"><a href="colinrobbins.dentedzebra.best">Colin's Portfolio</a></button>
+                        <button className="general__button button__ripple"><a href="https://colinrobbins.dentedzebra.best">Colin's Portfolio</a></button>
                     </td>
                 </tr>
                 <hr />
@@ -49,7 +49,7 @@ const Team = () => {
                     <td>
                         <h2>Ashley Dennison</h2>
                         <em><h3>Creator // Social Media Manager</h3></em>
-                        <p>Ashley went through and got her Bachelor's of Arts and Science, and majored in Criminology. 
+                        <p>Ashley went through and got her Honours in Bachelor of Arts and Science, majouring in Criminology. 
                             She has a passion for music and a keen eye for design.
                         </p>
                         <button className="general__button button__ripple"><Link to="/ashleydennison">Ashley's Portfolio</Link></button>
