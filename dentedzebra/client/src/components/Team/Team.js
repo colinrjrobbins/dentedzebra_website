@@ -27,7 +27,9 @@ const Team = () => {
                         <button className="general__button button__ripple"><a href="https://colinrobbins.dentedzebra.best">Colin's Portfolio</a></button>
                     </td>
                 </tr>
-                <hr />
+            </table>
+            <hr />
+            <table>
                 <tr>
                     <td>
                         <img src={AustinImage} alt="" />
@@ -41,7 +43,9 @@ const Team = () => {
                         <button className="general__button button__ripple"><Link to="/austincraven">Austin's Portfolio</Link></button>
                     </td>
                 </tr>
-                <hr />
+            </table>
+            <hr />
+            <table>
                 <tr>
                     <td>
                         <img src={AshleyImage} alt="" />
