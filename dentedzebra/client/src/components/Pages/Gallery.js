@@ -8,6 +8,7 @@ import './Animations.css';
 import ClassicRockSpeakers from '../../images/gallery/classic_rock_speakers.png';
 import StickerBomb from '../../images/gallery/stickerbomb_2_edit.png';
 import DeskSpeakers from '../../images/gallery/desk_speakers.jpg';
+import AllWhite from '../../images/gallery/allWhiteSpeakers.jpg';
 
 const Gallery = () => {
     return(
@@ -24,6 +25,12 @@ const Gallery = () => {
             high powered 8" woofers, loud yet smooth 2" tweeters and a crossover on the inside
             to handle any frequencies fired into them. On the outside a felt covering and a 3/4"
             MDF sealed box to give a clean bass feel and sound. 
+        </p>
+        <h2><u>All White</u></h2>
+        <img src={AllWhite} alt="" />
+        <p>These monster size speakers were made by specific design request that they will be drawn 
+            and painted on. This allows for maximum customizability for the buyer. He was blown away by 
+            the set and was thrilled by the design and simplicity.
         </p>
         <h2><u>The Desktop Speakers</u></h2>
         <img src={DeskSpeakers} alt="" />

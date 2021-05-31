@@ -6,7 +6,7 @@ import '../Pages/StyleGeneral.css';
 import '../Pages/Animations.css';
 
 import ColinImage from '../../images/team/colinImage.jpg';
-import AustinImage from '../../images/team/austinImage.png';
+import AustinImage from '../../images/team/austinImage1.jpg';
 import AshleyImage from '../../images/team/ashleyImage.jpg';
 
 const Team = () => {
@@ -20,7 +20,7 @@ const Team = () => {
                     </td>
                     <td>
                         <h2>Colin Robbins</h2>
-                        <em><h3>Lead Product Designer // Creator</h3></em>
+                        <em><h3>Lead Product Designer // Hardware Engineer</h3></em>
                         <p>Colin finished school in Computer Engineering and is continuing 
                             with Software Engineering while having fun building custom speakers for people.
                         </p>
@@ -36,8 +36,8 @@ const Team = () => {
                     </td>
                     <td>
                         <h2>Austin Craven</h2>
-                        <em><h3>Designer // Audio Engineer</h3></em>
-                        <p>Austin went through school as a Mechanical Engineer and took time 
+                        <em><h3>Designer // Manufacturing Engineer</h3></em>
+                        <p>Austin went through school at Ryerson University as a Mechatronics Engineer and took time 
                             exploring the world, partying and generally loves high quality music.
                         </p>
                         <button className="general__button button__ripple"><Link to="/austincraven">Austin's Portfolio</Link></button>
