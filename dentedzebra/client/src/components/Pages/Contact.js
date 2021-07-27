@@ -132,6 +132,7 @@ class Contact extends React.Component {
                     If that causes any inconveniences we do apologize, and are planning to expand in the near future.</p>
                 <img alt="york_region_map" src={YorkMap} />
                 <p>We will generally get back within 24 hours to ask any more questions we require before beginning the design.</p>
+                <p>If we do not get back within 24 hours, please send us an email directly. Occasionally we have server issues.</p>
                 {/* create the initial option for forms */}
                 <form className="general">
                     <label>Contact Us About:</label>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Process.css';
 import './StyleGeneral.css';
@@ -66,7 +67,7 @@ const Process = () => {
         </div>
         <p>What are you waiting for?!</p>
         <img src={FinalPhoto} alt="" />
-        <button className="general__button button__ripple"><a href="/contact">CONTACT US</a></button>
+        <button className="general__button button__ripple"><Link to="/contact">CONTACT US</Link></button>
     </div>);
 }
 

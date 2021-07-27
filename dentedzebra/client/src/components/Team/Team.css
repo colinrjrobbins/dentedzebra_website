@@ -1,0 +1,16 @@
+.team-page img{
+    width: 80%;
+    height: auto;
+}
+
+.team-page td{
+    width: 50%;
+}
+
+.team-page hr{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 70%;
+    color: lightgray;
+    
+}

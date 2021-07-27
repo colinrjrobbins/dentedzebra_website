@@ -1,10 +1,11 @@
-TO DO WEBSITE:
+CURRENT SITUATION:
 
-- What are we Page
-	- Bold links
+- Website is currently functioning and API has been added
+  and is running smoothly. 
 
-- Contact Page
-	- Change Contact Options to "Contact Us About:"
+TO DO:
 
-- Main animation
-	- Speed up home page animation a bit
+- Add more photos to Gallery
+
+- Finish teams and portfolios
+
