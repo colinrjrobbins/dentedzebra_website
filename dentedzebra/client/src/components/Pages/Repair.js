@@ -6,6 +6,8 @@ import './StyleGeneral.css';
 import './Animations.css';
 
 import AST1500_Rebuild from '../../images/repair/ast1500_subwoofer.jpg';
+import TubeAmp1 from '../../images/repair/tube_amp1.jpg';
+import TubeAmp2 from '../../images/repair/tube_amp2.jpg';
 
 const Repair = () => {
     return(
@@ -23,6 +25,15 @@ const Repair = () => {
             <li>Replace Speaker Drivers or Components</li>
             <li>Cleaning and Restoring</li>
         </div>
+        <p>We will also replace guitar amp Tubes as well! If you like a certain brand we will try our best to replace it, and if we can't we will do the proper
+            research to find a replacement that you will be happy with!
+        </p>
+            <div>
+                <img src={TubeAmp1} alt="" />
+            </div>
+            <div>
+                <img src={TubeAmp2} alt="" />
+            </div>
         <p>Take for example, this set of speakers that we repaired from someone who
             didn't want them anymore.
         </p>

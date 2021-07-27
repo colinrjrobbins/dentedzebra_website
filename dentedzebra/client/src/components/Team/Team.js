@@ -6,8 +6,8 @@ import '../Pages/StyleGeneral.css';
 import '../Pages/Animations.css';
 
 import ColinImage from '../../images/team/colinImage.jpg';
-import AustinImage from '../../images/team/austinImage1.jpg';
-import AshleyImage from '../../images/team/ashleyImage.jpg';
+// import AustinImage from '../../images/team/austinImage1.jpg';
+// import AshleyImage from '../../images/team/ashleyImage.jpg';
 
 const Team = () => {
     return(
@@ -29,7 +29,7 @@ const Team = () => {
                 </tr>
             </table>
             <hr />
-            <table>
+            {/* <table>
                 <tr>
                     <td>
                         <img src={AustinImage} alt="" />
@@ -59,7 +59,7 @@ const Team = () => {
                         <button className="general__button button__ripple"><Link to="/ashleydennison">Ashley's Portfolio</Link></button>
                     </td>
                 </tr>
-            </table>
+            </table> */}
             <button className="general__button button__ripple"><Link to="/contact">CONTACT US</Link></button>
         </div>
     )
