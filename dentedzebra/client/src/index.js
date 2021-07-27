@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css'; // wouldnt work in regular javascript, but it does work in react
